@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 640" role="img" aria-label="Map placeholder for Dielle's location">
+  <rect width="800" height="640" fill="#d9f3f0"/>
+  <path d="M-40 105C110 45 190 150 305 95S530 60 840 145M-60 308C90 245 180 368 321 298s275-40 530 56M-35 525c140-84 267 24 388-55s247-22 485 60" fill="none" stroke="#77d7ef" stroke-width="12" opacity=".9"/>
+  <g fill="none" stroke="#f7fbf9" stroke-width="9" opacity=".9">
+    <path d="M80 0 246 640M412 0 356 640M662 0 570 640"/>
+    <path d="M0 180 800 250M0 430 800 365"/>
+  </g>
+  <g fill="none" stroke="#a8c8bd" stroke-width="5" stroke-dasharray="14 12" opacity=".8">
+    <path d="M30 85 785 550M102 615 725 45"/>
+  </g>
+  <g transform="translate(402 295)">
+    <path d="M0-58c-34 0-61 27-61 61 0 45 61 108 61 108S61 48 61 3c0-34-27-61-61-61Z" fill="#8c1117" stroke="#fff" stroke-width="8"/>
+    <circle cy="2" r="19" fill="#d9b442"/>
+  </g>
+  <text x="400" y="505" text-anchor="middle" fill="#55736c" font-family="Arial, sans-serif" font-size="25" font-weight="700">DIELLE'S APIARY &amp; MEADERY</text>
+</svg>

@@ -1,0 +1,188 @@
+{  
+"information": {
+    "business_name": "Dielle's",
+    "socials": [
+        {
+            "social_name": "Facebook",
+            "social_link": "https://www.facebook.com/DiellesApiaryandMeaderyIncOfficial",
+            "social_hover_text": "Visit Dielle's Facebook Page",
+            "social_icon": "assets/logos/socials/facebook.svg",
+            "social_sort_order": 1
+        },
+        {
+            "social_name": "Instagram",
+            "social_link": "https://www.instagram.com/dielles",
+            "social_hover_text": "Visit Dielle's Instagram Page",
+            "social_icon": "assets/logos/socials/instagram.svg",
+            "social_sort_order": 2
+        },
+        {
+            "social_name": "X",
+            "social_link": "https://www.twitter.com/dielles",
+            "social_hover_text": "Visit Dielle's X Page",
+            "social_icon": "assets/logos/socials/x.svg",
+            "social_sort_order": 3
+        }
+    ],
+    "current_promo": {
+        "promo-text": "Use code \"FIRSTHONEYWINE2026\" for 15% OFF of your first order.",
+        "promo-hover-text": "Valid until 12/31/2026",
+        "promo-start": "09/05/2026",
+        "promo-end": "12/31/2026"
+    },
+    "contact": {
+        "messenger": "https://m.me/DiellesApiaryandMeaderyIncOfficial",
+        "email": "diellesbeefarm@yahoo.com",
+        "phone": "(+63)917 866 0545",
+        "fax": "(02) 8-5199027",
+        "location": "23 Lavender St., Victoria Homes, Tunasan, Muntinlupa City, Metro Manila, NCR, Philippines, 1773",
+        "coordinate_x": "14.362217847816126",
+        "coordinate_y": "121.01006767525791"
+    },
+    "featured_products": [
+        "1_a", "1_b", "2"
+    ],
+    "partners": [
+        {
+            "parnter_name": "Lazada",
+            "partner_image": "assets/logos/partners/lazada.webp",
+            "partner_hover_text": "Visit Dielle's Lazada Merchant Page",
+            "partner_link": "https://www.lazada.com.ph/dielles",
+            "partner_sort_order": 1
+        },
+        {
+            "parnter_name": "Shopee",
+            "partner_image": "assets/logos/partners/shopee.webp",
+            "partner_hover_text": "Visit Dielle's Shopee Merchant Page",
+            "partner_link": "https://www.shopee.com.ph/dielles",
+            "partner_sort_order": 2
+        },
+        {
+            "parnter_name": "Atin To",
+            "partner_image": "assets/logos/partners/atinto.webp",
+            "partner_hover_text": "Visit Atin To Local Store page",
+            "partner_link": "https://www.facebook.com/atinto",
+            "partner_sort_order": 3
+        },
+        {
+            "parnter_name": "Shopinas",
+            "partner_image": "assets/logos/partners/shopinas.webp",
+            "partner_hover_text": "Visit Shopinas page",
+            "partner_link": "https://www.facebook.com/shopinas",
+            "partner_sort_order": 4
+        },
+        {
+            "parnter_name": "Kultura",
+            "partner_image": "assets/logos/partners/kultura.webp",
+            "partner_hover_text": "Visit Kultura Store page",
+            "partner_link": "https://www.facebook.com/kultura",
+            "partner_sort_order": 5
+        },
+        {
+            "parnter_name": "Purple Bee",
+            "partner_image": "assets/logos/partners/purplebee.webp",
+            "partner_hover_text": "Visit Purple Bee Store page",
+            "partner_link": "https://www.facebook.com/purplebee",
+            "partner_sort_order": 6
+        }
+    ]
+},
+  "products": [
+    {
+        "product_name": "Honey",
+        "product_id": 1,
+        "variants": [
+            {
+                "product_variation_id": "a",
+                "product_variation_name": "30g",
+                "product_variation_name_short": "30g",
+                "product_variation_description": "Lorem ipsum dolor sit amet",
+                "product_variation_price": 59.99,
+                "product_variation_cover_img": "assets/images/products/1/a/product_cover.png",
+                "product_variation_images_folder": "assets/images/products/1/a",
+                "product_tags": ["best seller", "honey"],
+                "product_color_gradient":["#C9871B", "#8B4F09"],
+                "product_variation_sort_order": 1
+            },
+            {
+                "product_variation_id": "b",
+                "product_variation_name": "50g",
+                "product_variation_name_short": "50g",
+                "product_variation_description": "Lorem ipsum dolor sit amet",
+                "product_variation_price": 79.99,
+                "product_variation_cover_img": "assets/images/products/1/b/product_cover.png",
+                "product_variation_images_folder": "assets/images/products/1/b",
+                "product_tags": ["honey"],
+                "product_color_gradient":["#E0A72F", "#A86610"],
+                "product_variation_sort_order": 2
+            }
+        ]
+    },
+    {
+        "product_name": "Honey Wine",
+        "product_id": 2,
+        "variants": [
+            {
+                "product_variation_id": "a",
+                "product_variation_name": "Original Honey",
+                "product_variation_name_short": "OG",
+                "product_variation_description": "Lorem ipsum dolor sit amet",
+                "product_variation_price": 59.99,
+                "product_variation_cover_img": "assets/images/products/2/a/product_cover.png",
+                "product_variation_images_folder": "assets/images/products/1/a",
+                "product_tags": ["new", "featured", "wine", "sample", "another sample", "another samples", "another"],
+                "product_color_gradient":["#8C1117", "#5C0710"],
+                "product_variation_sort_order": 1
+            },
+            {
+                "product_variation_id": "b",
+                "product_variation_name": "Strawberry",
+                "product_variation_name_short": "ST",
+                "product_variation_description": "Lorem ipsum dolor sit amet",
+                "product_variation_price": 79.99,
+                "product_variation_cover_img": "assets/images/products/2/b/product_cover.png",
+                "product_variation_images_folder": "assets/images/products/1/b",
+                "product_tags": ["wine"],
+                "product_color_gradient":["#C94361", "#8B1E3F"],
+                "product_variation_sort_order": 2
+            },
+            {
+                "product_variation_id": "c",
+                "product_variation_name": "Strawberry",
+                "product_variation_name_short": "ST",
+                "product_variation_description": "Lorem ipsum dolor sit amet",
+                "product_variation_price": 79.99,
+                "product_variation_cover_img": "assets/images/products/2/b/product_cover.png",
+                "product_variation_images_folder": "assets/images/products/1/b",
+                "product_tags": ["wine"],
+                "product_color_gradient":["#B64073", "#681D60"],
+                "product_variation_sort_order": 2
+            },
+            {
+                "product_variation_id": "d",
+                "product_variation_name": "Strawberry",
+                "product_variation_name_short": "ST",
+                "product_variation_description": "Lorem ipsum dolor sit amet",
+                "product_variation_price": 79.99,
+                "product_variation_cover_img": "assets/images/products/2/b/product_cover.png",
+                "product_variation_images_folder": "assets/images/products/1/b",
+                "product_tags": ["wine"],
+                "product_color_gradient":["#D65A78", "#963252"],
+                "product_variation_sort_order": 2
+            },
+            {
+                "product_variation_id": "e",
+                "product_variation_name": "Strawberry",
+                "product_variation_name_short": "ST",
+                "product_variation_description": "Lorem ipsum dolor sit amet",
+                "product_variation_price": 79.99,
+                "product_variation_cover_img": "assets/images/products/2/b/product_cover.png",
+                "product_variation_images_folder": "assets/images/products/1/b",
+                "product_tags": ["wine"],
+                "product_color_gradient":["#A93650", "#651027"],
+                "product_variation_sort_order": 2
+            }
+        ]
+    }
+  ]
+}
