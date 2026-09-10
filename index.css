@@ -2702,7 +2702,9 @@ main {
 .product-detail__image-arrow:focus,
 .product-detail__image-arrow:focus-visible {
     background: var(--color-gold);
-    transform: translateY(-50%) scale(1.1);
+    /* The gallery clips overflow to contain the zoomed image. Keep the
+       controls at their original size so their hover state is not clipped. */
+    transform: translateY(-50%);
 }
 
 .product-detail__thumbnails {
@@ -2836,12 +2838,33 @@ main {
     left: 50%;
     white-space: nowrap;
     transform: translateX(-50%) translateY(5px);
+    transition: opacity var(--transition-fast);
 }
 
 .product-detail__variant:hover .product-detail__variant-tooltip,
 .product-detail__variant:focus-visible .product-detail__variant-tooltip {
     opacity: 1;
     transform: translateX(-50%) translateY(0);
+}
+
+.product-detail__variant.is-tooltip-left-aligned .product-detail__variant-tooltip {
+    left: 0;
+    transform: translateX(0) translateY(5px);
+}
+
+.product-detail__variant.is-tooltip-right-aligned .product-detail__variant-tooltip {
+    left: 100%;
+    transform: translateX(-100%) translateY(5px);
+}
+
+.product-detail__variant.is-tooltip-left-aligned:hover .product-detail__variant-tooltip,
+.product-detail__variant.is-tooltip-left-aligned:focus-visible .product-detail__variant-tooltip {
+    transform: translateX(0) translateY(0);
+}
+
+.product-detail__variant.is-tooltip-right-aligned:hover .product-detail__variant-tooltip,
+.product-detail__variant.is-tooltip-right-aligned:focus-visible .product-detail__variant-tooltip {
+    transform: translateX(-100%) translateY(0);
 }
 
 .product-detail__order {
@@ -3001,6 +3024,20 @@ main {
 
     .product-detail__order {
         width: 100%;
+    }
+
+    /* The modal content scrolls vertically and clips horizontal overflow on
+       narrow screens. Avoid growing controls beyond that scroll area. */
+    .product-detail__close:hover,
+    .product-detail__close:focus,
+    .product-detail__close:focus-visible,
+    .product-detail__variant:hover,
+    .product-detail__variant:focus,
+    .product-detail__variant.is-selected,
+    .product-detail__order:hover,
+    .product-detail__order:focus,
+    .product-detail__order:focus-visible {
+        transform: none;
     }
 }
 
@@ -3589,6 +3626,18 @@ main {
 
     .site-footer__socials {
         margin: 0;
+    }
+
+    .site-footer__socials .social-link__tooltip {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%) translateY(5px);
+    }
+
+    .site-footer__socials .social-link:hover .social-link__tooltip,
+    .site-footer__socials .social-link:focus .social-link__tooltip,
+    .site-footer__socials .social-link:focus-visible .social-link__tooltip {
+        transform: translateX(-50%) translateY(0);
     }
 }
 

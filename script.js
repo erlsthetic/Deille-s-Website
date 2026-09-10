@@ -1608,6 +1608,34 @@ async function openProductDetail(product, initialVariant) {
             variantsContainer.querySelectorAll("button").forEach((button, index) => {
                 const variant = variants[index];
 
+                const alignTooltip = () => {
+                    const tooltip = button.querySelector(".product-detail__variant-tooltip");
+                    const scrollBounds = scrollBody.getBoundingClientRect();
+                    const safeInset = 8;
+                    const visibleLeft = scrollBounds.left + scrollBody.clientLeft + safeInset;
+                    const visibleRight = scrollBounds.left + scrollBody.clientLeft + scrollBody.clientWidth - safeInset;
+
+                    if (!tooltip || visibleRight <= visibleLeft) {
+                        return;
+                    }
+
+                    button.classList.remove("is-tooltip-left-aligned", "is-tooltip-right-aligned");
+                    const buttonBounds = button.getBoundingClientRect();
+                    const centeredLeft = buttonBounds.left + ((buttonBounds.width - tooltip.offsetWidth) / 2);
+                    const centeredRight = centeredLeft + tooltip.offsetWidth;
+
+                    if (centeredLeft < visibleLeft) {
+                        button.classList.add("is-tooltip-left-aligned");
+                    } else if (centeredRight > visibleRight) {
+                        button.classList.add("is-tooltip-right-aligned");
+                    }
+                };
+
+                const refreshTooltipAlignment = () => {
+                    alignTooltip();
+                    window.requestAnimationFrame(alignTooltip);
+                };
+
                 const schedulePreview = () => {
                     window.clearTimeout(hoverTimer);
                     hoverTimer = window.setTimeout(() => {
@@ -1624,9 +1652,15 @@ async function openProductDetail(product, initialVariant) {
                     }
                 };
 
-                button.addEventListener("mouseenter", schedulePreview);
+                button.addEventListener("mouseenter", () => {
+                    refreshTooltipAlignment();
+                    schedulePreview();
+                });
                 button.addEventListener("mouseleave", clearPreview);
-                button.addEventListener("focus", schedulePreview);
+                button.addEventListener("focus", () => {
+                    refreshTooltipAlignment();
+                    schedulePreview();
+                });
                 button.addEventListener("blur", clearPreview);
                 button.addEventListener("click", () => {
                     window.clearTimeout(hoverTimer);
