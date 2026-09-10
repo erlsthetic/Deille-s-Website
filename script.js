@@ -428,14 +428,19 @@ function initializeOrderSection() {
 
     let fallbackTimer;
     let mapRequestStarted = false;
+    let mapLoaded = false;
 
     const showMapFallback = () => {
+        if (mapLoaded) {
+            return;
+        }
+
         mapFrame.classList.add("is-fallback");
         mapFrame.classList.remove("is-loaded");
     };
 
     const beginMapLoadTimer = () => {
-        if (mapRequestStarted) {
+        if (mapRequestStarted || mapLoaded) {
             return;
         }
 
@@ -444,11 +449,9 @@ function initializeOrderSection() {
     };
 
     map.addEventListener("load", () => {
-        if (mapFrame.classList.contains("is-fallback")) {
-            return;
-        }
-
+        mapLoaded = true;
         window.clearTimeout(fallbackTimer);
+        mapFrame.classList.remove("is-fallback");
         mapFrame.classList.add("is-loaded");
     });
     map.addEventListener("error", showMapFallback);
